@@ -9,8 +9,9 @@ html{
 
 #mobileheader header{
   border-bottom: 1px solid #2db7f5;
-  padding-left: 10px;
-  
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
 }
 
 #mobileheader header img{
@@ -20,6 +21,12 @@ html{
 #mobileheader header span{
   font-size: 35px;
   vertical-align: top;
-  padding-left: 10px;
-  color: #2db7f5
+  padding: 0 10px;
+  color: #2db7f5;
+  flex:1
+}
+
+#mobileheader header i{
+  font-size: 0.5rem;
+  color: #2db7f5;
 }
