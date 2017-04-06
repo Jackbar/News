@@ -23,6 +23,14 @@
   display: inline-block !important;
 }
 
+.container{
+  padding-top: 20px;
+}
+
+.leftContainer{
+  width: 400px;
+}
+
 .footer{
   text-align: center;
 }
