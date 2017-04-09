@@ -29,8 +29,46 @@
 
 .leftContainer{
   width: 400px;
+  float: left;
+  margin-right: 10px;
 }
 
+.carousel img{
+  width: 400px;
+  height: 260px
+}
+.tabs_news{
+  width: 460px;
+}
+
+.tabs_news a {
+    line-height: 22px !important;
+    color: #666 !important;
+}
+
+.imageblockcontainer{
+  width: 400px;
+  float: left;
+}
+
+.ant-card-body{
+  display: flex;
+  flex-wrap: wrap;
+}
+.imageblock{
+  /*float: left;*/
+  margin-right: 4px
+}
+.custom-image img{
+  width: 112px;
+}
+
+.custom-card h3{
+  width: 112px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .footer{
   text-align: center;
 }
