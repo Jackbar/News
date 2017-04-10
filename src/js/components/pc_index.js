@@ -7,7 +7,7 @@ export default class PCIndex extends React.Component {
     return (
       <div>
         <PCHeader></PCHeader>
-        <PCNewsContainer></PCNewsContainer> 
+        <PCNewsContainer></PCNewsContainer>
         <PCFooter></PCFooter>
       </div>
     )

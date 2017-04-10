@@ -69,6 +69,12 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.custom-card p{
+  width: 112px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .footer{
   text-align: center;
 }
