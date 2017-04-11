@@ -3,6 +3,7 @@ import {Row, Col} from 'antd';
 import PCHeader from './pc_header'
 import PCFooter from './pc_footer'
 import PCNewsImageBlock from './pc_news_image_block.js'
+import Comments from './common_comments.js'
 export default class PCNewsDetails extends Component {
 
   constructor() {
@@ -33,6 +34,7 @@ export default class PCNewsDetails extends Component {
           <Col span={2}></Col>
           <Col span={14}>
             <div className="articleContainer" dangerouslySetInnerHTML={this.createMarkup()}></div>
+            <Comments uniquekey={this.props.params.uniquekey}></Comments>
           </Col>
           <Col span={6}>
             <PCNewsImageBlock cardTitle='头条' type="top" count={20}></PCNewsImageBlock>
