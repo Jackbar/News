@@ -1,5 +1,13 @@
 import React, {Component} from 'react'
-import {Row, Col, Form, Input, Button,Card} from 'antd';
+import {
+  Row,
+  Col,
+  Form,
+  Input,
+  Button,
+  Card,
+  notification
+} from 'antd';
 const FormItem = Form.Item;
 class CommonComments extends Component {
   constructor() {
@@ -29,6 +37,15 @@ class CommonComments extends Component {
     })
   }
 
+  favorite() {
+    var myFetchOptions = {
+      method: 'GET'
+    }
+    fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=uc&userid=" + localStorage.userid + "&uniquekey=" + this.props.uniquekey, myFetchOptions).then(response => response.json()).then(json => {
+      //收藏成功以后进行一下全局的提醒
+      notification['success']({message: '提醒', description: '收藏此文章成功'});
+    });
+  }
   render() {
     const {getFieldDecorator} = this.props.form
     const {comments} = this.state
@@ -51,6 +68,7 @@ class CommonComments extends Component {
                 )}
               </FormItem>
               <Button htmlType='submit' type="primary">提交</Button>
+              <Button htmlType="button" type="primary" onClick={this.favorite.bind(this)}>收藏</Button>
             </Form>
           </Col>
         </Row>
